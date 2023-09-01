@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Produtos</title>
+</head>
+<body>
+  <h1>Lista de Produtos</h1>
+  <ul id="produtos-list">
+    <!-- A lista de produtos será populada dinamicamente com JavaScript -->
+  </ul>
+  <p><a href="/">Voltar para a Página Inicial</a></p>
+  
+  <script>
+    // Captura a lista de produtos pelo ID
+    const produtosList = document.getElementById('produtos-list');
+
+    // Array de produtos
+    const produtos = [
+      // Coloque aqui os produtos manualmente como objetos
+      // Exemplo: { nome: 'Produto 1', preco: 10, descricao: 'Descrição do Produto 1' },
+      // ...
+
+      // Ou, se preferir, você pode adicionar produtos via JavaScript
+      // Exemplo:
+      // { nome: 'Produto 1', preco: 10, descricao: 'Descrição do Produto 1' },
+      // { nome: 'Produto 2', preco: 20, descricao: 'Descrição do Produto 2' },
+    ];
+
+    // Popula a lista de produtos com os dados
+    produtos.forEach(produto => {
+      const item = document.createElement('li');
+      item.innerHTML = `
+        <strong>${produto.nome}</strong> - Preço: ${produto.preco} - ${produto.descricao}
+      `;
+      produtosList.appendChild(item);
+    });
+  </script>
+</body>
+</html>

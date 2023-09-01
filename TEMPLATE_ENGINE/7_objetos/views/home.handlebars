@@ -1,0 +1,10 @@
+<p>Nome {{ user.name }} {{ user.surname }} Idade {{ user.age }}</p>
+{{#if auth}}
+    <p>Você está logado, <a href="./dashboard">Clique aqui</a> Para acessar a área de membros</p>
+{{/if}}
+
+{{#if approved}}
+    <p>Parabéns {{ user.name }}, seu cadastro foi aprovado</p>
+{{else}}
+    <p>{{ user.name }} {{ user.surname }} Seu cadastro precisa de aprovação</p>
+{{/if}}

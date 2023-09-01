@@ -1,0 +1,39 @@
+<style>
+    section{
+        display: flex;
+        gap: 2rem;
+        width: 1000;
+        justify-content: center;
+    }
+    div{
+        flex-direction: column;
+        text-align: center;
+    }
+</style>
+
+<h1>Página de Produtos</h1>
+<a href="/">Voltar</a>
+<section>
+    {{#each produto1}}
+       <div>
+        <img src="{{this.img1}}" alt="">
+        <h1>{{this.name}}</h1>
+        <h1>{{this.age}}</h1>
+        <h1>{{this.dec}}</h1>
+       </div>
+       
+       <div>
+        <img src="{{this.img2}}" alt="">
+        <h1>{{this.namee}}</h1>
+        <h1>{{this.agee}}</h1>
+        <h1>{{this.decc}}</h1>
+       </div>
+        
+       <div>
+        <img src="{{this.img3}}" alt="">
+        <h1>{{this.nameee}}</h1>
+        <h1>{{this.ageee}}</h1>
+        <h1>{{this.deccc}}</h1>
+       </div>
+    {{/each}}
+</section>
